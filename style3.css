@@ -262,9 +262,16 @@ header .navbar ul li a:hover {
     padding: 1rem 0;
 }
 
-#lag {
+.lag {
     font-size: 2rem;
     color: #fff;
+}
+.lag ul li a{
+    font-size: 2rem;
+    color: #fff;
+}
+.lag ul li a:hover{
+    color: greenyellow;
 }
 
 content {
