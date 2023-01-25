@@ -12,22 +12,24 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    padding-left: 30rem;
     background: linear-gradient(black, red);
-    padding: 5.5rem;
 }
 
 section {
-    padding: 1rem 7%;
-    min-height: 100%;
+    padding: 1rem 5%;
+    height: 58rem;
+    width: 80rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1rem 0 1rem 9rem;
+    background: linear-gradient(black, red);
+
 }
 
 .btn {
@@ -56,19 +58,36 @@ section {
 }
 
 header {
-    width: 35rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
-    margin-top: 20px;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 1rem;
+position: fixed;
+top: 0; left: 0; bottom: 0;
+display: flex;
+flex-flow: column;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+padding: 8rem 2rem;
+width: 34rem;
+text-align: center;
+box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+border-radius: 1rem; 
+
 }
 
-header .user {
-    padding-top: 2rem;
+#menubar {
+    color: white;
+    font-size: 1.8rem;
+    position: fixed;
+    top: 1rem;right: 1rem;
+    z-index: 10000;
+    background: red;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+    
 }
 
-header .user img {
+ .user img {
     margin: 1rem 0;
     height: 15rem;
     width: 15rem;
@@ -77,77 +96,58 @@ header .user img {
     box-shadow: 0 0 0 1rem rgba(255, 255, 255, .2);
 }
 
-header .user .name {
+.user .name {
     font-size: 3rem;
     color: #fff;
     padding: .5rem 0;
 }
-
-header .user .post {
+.user .post {
     font-size: 1.8rem;
     color: #eee;
     font-weight: lighter;
 }
 
-header .navbar {
-    padding: 1rem 3rem;
-}
-
-header .navbar ul li {
-    margin: 1rem 0;
-    list-style: none;
-}
-
-header .navbar ul li a {
+.navbar a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 2rem;
-    color: #fff;
+    
     background: rgba(255, 255, 255, .2);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
     border-radius: 1rem;
     transition: all .2s linear;
+    width: 20rem;
+    color: white;
+    margin: 1rem 0;
+}
+.navbar a:hover {
+    background-color: black;
+    color: white;
 }
 
-header .navbar ul li a:hover {
-    background: rgba(255, 255, 255, .5);
-    color: #555;
-    transition: none;
-}
-
-.container {
-    height: 58rem;
-    width: 80rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
-    border-radius: 1rem;
-    overflow: hidden;
-}
-
-.home {
+.home_page{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
-    position: relative;
-
 }
 
-.home h3 {
+.home_page h3 {
     font-size: 2.5rem;
     font-weight: lighter;
     color: #eee;
 }
 
-.home .name span {
+.name span {
     font-size: 4rem;
     color: #fff;
 }
 
-.home .post {
+.post {
     padding: 1rem 0;
 }
 
-.home .post span {
+.post span {
     font-size: 3rem;
     color: #fff;
 }
@@ -294,7 +294,7 @@ content {
 }
 
 .address p {
-    font-size: 25px;
+    font-size: 2rem;
     color: #eee;
     cursor: pointer;
 }
@@ -323,3 +323,115 @@ content {
     background: rgba(255, 255, 255, .5);
     color: #555;
 }
+.project{
+    min-height: 50vh;
+    padding: 1rem 5%;
+    width: 80rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1rem 0 1rem 9rem;
+    background: linear-gradient(black, red);
+
+}
+.lag ul li{
+    margin-top: 3rem;
+}
+
+/* media query for tab */
+
+
+@media (max-width: 991px) {
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#menubar {
+    display: initial;
+    }
+header{
+    left: -120%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+.active{
+    left: 0%;
+}
+.home_page{
+    padding: 10rem;
+    margin: 1rem auto;
+    width: 100%;
+}
+.about{
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    padding: 2rem;
+}
+.education{
+margin: 10px auto;
+width: 100%;
+height: 100%;
+}
+.contact{
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+    padding: 1rem;
+}
+.project{
+    height: 100%;
+    width: 100%;
+    margin: 10px auto;
+}
+}
+/* media query for mobile device */
+@media (max-width: 480px) {
+    
+   
+    html{
+        font-size: 45%;
+    }
+    body {
+        
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    header{
+        
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-color:black;
+        justify-content: center;
+        align-items: center;
+    }
+    .home_page{
+        padding: 10rem;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact{
+        width: 100%;
+        height: 100%;
+        margin: 10px auto;
+    }
+}
+
+    
+   
+
+
