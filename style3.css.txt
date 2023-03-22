@@ -20,6 +20,13 @@ body {
     background: linear-gradient(black, red);
 }
 
+:root {
+    --perpale: #662e9b;
+    --black: black;
+    --sectioncol: #ffffff;
+    --navbg: #f0efeb;
+    --bodycolor: #d9d9d9;
+  }
 section {
     padding: 1rem 5%;
     height: 58rem;
@@ -28,7 +35,8 @@ section {
     border-radius: 1rem;
     overflow: hidden;
     margin: 1rem 0 1rem 9rem;
-    background: linear-gradient(black, red);
+    /* background: linear-gradient(black, red); */
+    background-color: var(--sectioncol);
 
 }
 
@@ -396,7 +404,7 @@ height: 100%;
     
    
     html{
-        font-size: 45%;
+        font-size: 55%;
     }
     body {
         
